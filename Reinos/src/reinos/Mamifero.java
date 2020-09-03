@@ -2,7 +2,7 @@
 package reinos;
 
 public class Mamifero extends Animal {
-    public boolean sangreCaliente;
+    private boolean sangreCaliente;
 
     public Mamifero(boolean sangreCaliente, float Peso) {
         super(Peso);
@@ -18,11 +18,11 @@ public class Mamifero extends Animal {
     }
     
     public void parir(){
-        System.out.println("he parido");
+        System.out.println("El mamifero esta pariendo...");
     }
     
     public void amamantar(){
-        System.out.println("he amamantado");
+        System.out.println("El mamifero esta amamantando...");
     }
     
     

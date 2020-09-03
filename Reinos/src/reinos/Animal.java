@@ -2,8 +2,12 @@
 package reinos;
 
 public class Animal {
-    public float Peso;
+    private float Peso;
 
+    public Animal() {
+    }
+
+    
     public Animal(float Peso) {
         this.Peso = Peso;
     }
@@ -16,8 +20,8 @@ public class Animal {
         this.Peso = Peso;
     }
     
-    public void comer(){
-        System.out.println("he comido");
+    public  String comer(){
+        return "El animal está comiendo";
     }
     
 }

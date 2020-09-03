@@ -2,7 +2,7 @@
 package reinos;
 
 public class Perro extends Mamifero{
-    public String colorPelo;
+    private String colorPelo;
 
     public Perro(String colorPelo, boolean sangreCaliente, float Peso) {
         super(sangreCaliente, Peso);
@@ -18,7 +18,7 @@ public class Perro extends Mamifero{
     }
     
     public void ladrar(){
-        System.out.println("he ladrado");
+        System.out.println("El perro está ladrando");
     }
     
 }

@@ -8,6 +8,6 @@ public class Delfin extends Mamifero {
     }
     
     public void nadar(){
-        System.out.println("he nadado");
+        System.out.println("El delfin esta nadando");
     }
 }
