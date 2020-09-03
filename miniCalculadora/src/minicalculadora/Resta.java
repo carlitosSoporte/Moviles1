@@ -1,14 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package minicalculadora;
 
-/**
- *
- * @author Usuario
- */
-public class Resta {
+public class Resta extends Operacion{
+
+    public Resta(double Numero1, double Numero2) {
+        super(Numero1, Numero2);
+        this.setOperacionMatematica(2);
+    }
+    
     
 }
