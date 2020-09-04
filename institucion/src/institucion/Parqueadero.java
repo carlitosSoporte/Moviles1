@@ -13,5 +13,5 @@ public class Parqueadero {
     static int valor = 1200;
     
     //atributo de clase como constante
-    static final int  Valor2 = 900;
+    static final int  VALOR = 900;
 }
