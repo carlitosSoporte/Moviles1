@@ -34,6 +34,8 @@ public class PruebaDesempeño {
         System.out.println("su material es " + libro1.getIdMat() );
         System.out.println("su autor es " + libro1.getAutor() );
         System.out.println("su titulo es " + libro1.getTitulo());
+        
+    
        
     }
     
