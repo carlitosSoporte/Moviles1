@@ -3,7 +3,7 @@ package pkginterface;
 
 public class Interface {
     
-    interface iAnimales{
+    public interface iAnimales{
         public void comer();
         public String correr(int distancia);
         public String enfermar(String enfermedad);
