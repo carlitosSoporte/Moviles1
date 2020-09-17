@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText valor1, valor2;
     TextView resultado;
     Button sumar, restar, dividir, multiplicar, limpiar;
+    RadioButton rbsi,rbno;
+    CheckBox cbiva;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +40,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dividir = findViewById(R.id.btndividir);
         limpiar = findViewById(R.id.btnlimpiar);
 
+        //radio buton
+        rbsi = findViewById(R.id.rbsi);
+        rbno = findViewById(R.id.rbno);
+
+        //checkbox
+        cbiva = findViewById(R.id.cbiva);
         /*
         sumar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,8 +136,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
 
             }
-            DecimalFormat nro = new DecimalFormat("$###,###,###.##");
-            resultado.setText(nro.format(mresultado));
+
+            if(cbiva.isChecked()){
+                mresultado *= 1.19;
+            }
+            if(rbsi.isChecked()){
+                DecimalFormat nro = new DecimalFormat("$###,###,###.##");
+                resultado.setText(nro.format(mresultado));
+            }
+            else{
+                resultado.setText(String.valueOf(mresultado));
+            }
+
         }
         else{
             //mostrar alerta de campos incompletos
