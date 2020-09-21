@@ -2,8 +2,8 @@ package com.example.calculadora;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -17,8 +17,8 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText valor1, valor2;
-    TextView resultado;
-    Button sumar, restar, dividir, multiplicar, limpiar;
+    TextView resultado, usuario;
+    Button sumar, restar, dividir, multiplicar, limpiar, enviar;
     RadioButton rbsi,rbno;
     CheckBox cbiva;
     @Override
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //valores por teclado
         valor1 = findViewById(R.id.txtValor1);
         valor2 = findViewById(R.id.txtValor2);
+        usuario = findViewById(R.id.txtusuario);
 
         //resultado
         resultado = findViewById(R.id.txtResultado);
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         multiplicar = findViewById(R.id.btnmultiplicar);
         dividir = findViewById(R.id.btndividir);
         limpiar = findViewById(R.id.btnlimpiar);
+        enviar = findViewById(R.id.btnenviar);
 
         //radio buton
         rbsi = findViewById(R.id.rbsi);
@@ -100,11 +102,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
          */
+        usuario.setText(getIntent().getStringExtra("eusuario"));
         sumar.setOnClickListener(this);
         restar.setOnClickListener(this);
         dividir.setOnClickListener(this);
         multiplicar.setOnClickListener(this);
         limpiar.setOnClickListener(this);
+        enviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //startActivity(new Intent(getApplicationContext(),Main2Activity.class));
+                Intent actividad2 = new Intent(getApplicationContext(),Main2Activity.class);
+                actividad2.putExtra("valor1",valor1.getText().toString());
+                actividad2.putExtra("resultado",resultado.getText().toString());
+                startActivity(actividad2);
+            }
+        });
 
     }
 
