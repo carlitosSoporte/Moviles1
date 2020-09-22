@@ -13,6 +13,7 @@ public class Main3Activity extends AppCompatActivity {
 
     Button ingresar;
     EditText usuario, contraseña;
+    String nombreAplicativo;
 
 
 
@@ -24,6 +25,9 @@ public class Main3Activity extends AppCompatActivity {
         ingresar = findViewById(R.id.btningresar);
         usuario = findViewById(R.id.etusuario);
         contraseña = findViewById(R.id.etcontraseña);
+        
+
+
 
         ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
