@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".material"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="material"
+            android:gravity="center"
+            android:layout_marginTop="5dp"/>
+        <EditText
+            android:id="@+id/etIdMaterial"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="ingrese el id Material"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Usuario"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/EmailUsuario"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:enabled="false"/>
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre Material"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/etNombreMaterial"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="ingrese nombre material"/>
+
+        <RadioGroup
+            android:id="@+id/rgGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal">
+            <RadioButton
+                android:id="@+id/rbLenguajesMaterial"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Lenguaje de programación"/>
+            <RadioButton
+                android:id="@+id/rbBaseDatos"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Bases de datos"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnAgregarMaterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar"
+            android:textAllCaps="false"
+            android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/btnBuscarMaterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btnActualizarMaterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actualizar"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btnEliminarMaterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btnListarMaterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listar"
+            android:textAllCaps="false" />
+    </ScrollView>
+
+
+</LinearLayout>
